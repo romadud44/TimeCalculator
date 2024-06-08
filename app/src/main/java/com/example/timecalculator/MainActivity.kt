@@ -1,5 +1,6 @@
 package com.example.timecalculator
 
+import TimeOperation
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -44,6 +45,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
-
+        if (firstOperandET.text.isEmpty() || secondOperandET.text.isEmpty()) {
+            return
+        }
+        var first = firstOperandET.text.toString()
+        var second = secondOperandET.text.toString()
+        var result = when(v!!.id){
+            R.id.buttonSumBTN -> TimeOperation().sum(first, second)
+            R.id.buttonDifBTN -> TimeOperation().dif(first, second)
+            else -> 0
+        }
+        val resultText = "${result/60}m${result%60}s"
+        resultTV.text = resultText
     }
 }
