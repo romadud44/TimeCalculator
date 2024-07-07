@@ -7,17 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/programTitleTV"
-        android:layout_width="wrap_content"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/titleTV"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        android:background="@color/green"
+        tools:ignore="MissingConstraints" />
+
 
     <LinearLayout
         android:id="@+id/linearLayoutInputOperand"
@@ -27,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/programTitleTV"
+        app:layout_constraintTop_toBottomOf="@id/toolbarMain"
         app:layout_constraintVertical_bias="0.1">
 
         <EditText
@@ -62,7 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8pt"
+            android:layout_marginEnd="4pt"
             android:layout_weight="1"
+            android:background="@color/greenButtons"
             android:text="@string/textButtonSum"
             android:textSize="36sp" />
 
@@ -71,8 +70,10 @@
             android:id="@+id/buttonDifBTN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4pt"
             android:layout_marginEnd="8pt"
             android:layout_weight="1"
+            android:background="@color/greenButtons"
             android:text="@string/textButtonDif"
             android:textSize="36sp" />
     </LinearLayout>
@@ -82,13 +83,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/textResultTV"
+        android:hint="@string/textResultTV"
+        android:textColor="@color/redOutResult"
+        android:textColorHint="@color/black"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayoutChoiceOperator"
-        app:layout_constraintVertical_bias="0.1"/>
+        app:layout_constraintVertical_bias="0.1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

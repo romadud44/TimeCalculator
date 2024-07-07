@@ -4,4 +4,6 @@
     <string name="textButtonDif">-</string>
     <string name="textButtonSum">+</string>
     <string name="textResultTV">Результат</string>
+    <string name="reset">Reset</string>
+    <string name="exit">Exit</string>
 </resources>
